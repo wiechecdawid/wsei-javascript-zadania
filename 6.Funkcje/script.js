@@ -24,3 +24,15 @@ console.log(arrayReturner(arr));
 */
 
 //Zadanie 4
+let string = 'abcd';
+let count = 0;
+
+for(let i = 1; i < 6; i++) {
+  setTimeout(() => {
+    console.log(string)
+    count ++;
+    if(count === 5){
+      console.log("KONIEC");
+    }
+  }, i*3000);
+}
