@@ -56,7 +56,11 @@ function divide(a,b){
     return a / b;
 }
 
+function save()
+
 
 function Calculator(){
     this.memory = [];
+    this.showMemory = () => console.log(this.memory);
+    this.resetMemory = () => this.memory = [];
 }
