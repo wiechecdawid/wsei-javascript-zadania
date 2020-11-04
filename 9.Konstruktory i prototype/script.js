@@ -82,26 +82,38 @@
 // console.log(kalk.showMemory());
 
 //Zadanie 3
-function generateRandomNumber(min, max){
-    min = Math.floor(min);
-    max = Math.ceil(max);
+function generateRandomNumber(){
+    min = 1;
+    max = 10;
 
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+MessWithNumber.prototype.shouldBeGenerated = false;
+MessWithNumber.prototype.number = 0;
+
 function MessWithNumber(){
-    this.randomNumber = () => {
-        this.prototype.shouldBeGenerated = true;
-        let i = 0;
-        while(this.prototype.shouldBeGenerated){
-            setTimeout(generateRandomNumber(1, 10), i*1000);
-        }
+    this.startRandomNumbers = () => {
+        this.shouldBeGenerated = true;
+        let i = 1;
+        while(this.shouldBeGenerated){
+            let temp = generateRandomNumber();
+            i++;
+            this.stopRandomNubmbers(temp);
+
+            this.number = temp;
+            console.log(this.number);
+        }   
     }
 
-    this.stopRandomNubmber = () => {
-
+    this.stopRandomNubmbers = (newNumber) => {
+        if(newNumber - this.number == 5)
+            this.shouldBeGenerated = false;
     }
 }
 
-MessWithNumber.prototype.number = 0;
-MessWithNumber.prototype.shouldBeGenerated = false;
+
+let m = new MessWithNumber();
+let n = new MessWithNumber();
+
+m.startRandomNumbers();
