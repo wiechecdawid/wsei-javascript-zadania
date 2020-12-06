@@ -36,50 +36,50 @@
 
 
 //Zadanie 2
-// function add(a, b){
-//     return a + b;
-// }
+function add(a, b){
+    return a + b;
+}
 
-// function subtract(a, b){
-//     return a - b;
-// }
+function subtract(a, b){
+    return a - b;
+}
 
-// function multiply(a, b){
-//     return a * b;
-// }
+function multiply(a, b){
+    return a * b;
+}
 
-// function divide(a,b){
-//     if(b == 0){
-//         console.log("Cannot divide by zero!");
-//         return;
-//     }    
-//     return a / b;
-// }
+function divide(a,b){
+    if(b == 0){
+        console.log("Cannot divide by zero!");
+        return;
+    }    
+    return a / b;
+}
 
-// function Calculator(){
-//     this.memory = [];
-//     this.showMemory = () => console.log(this.memory);
-//     this.resetMemory = () => this.memory = [];
-//     this.calculate = (a,b,operation) => {
-//         this.memory.push(operation(a,b));
-//         return operation(a,b);
-//     }
-// }
+function Calculator(){
+    this.memory = [];
+    this.showMemory = () => console.log(this.memory);
+    this.resetMemory = () => this.memory = [];
+    this.calculate = (a,b,operation) => {
+        this.memory.push(operation(a,b));
+        return operation(a,b);
+    }
+}
 
-// let calc = new Calculator();
-// let kalk = new Calculator();
+let calc = new Calculator();
+let kalk = new Calculator();
 
-// console.log(calc.calculate(5, 10, add));
-// console.log(calc.calculate(5, 23, divide));
-// console.log(calc.memory);
+console.log(calc.calculate(5, 10, add));
+console.log(calc.calculate(5, 23, divide));
+console.log(calc.memory);
 
-// console.log(kalk.calculate(5.3, 10, multiply));
-// console.log(kalk.calculate(15, 23, subtract));
-// console.log(kalk.memory);
+console.log(kalk.calculate(5.3, 10, multiply));
+console.log(kalk.calculate(15, 23, subtract));
+console.log(kalk.memory);
 
-// calc.showMemory();
-// kalk.resetMemory();
-// console.log(kalk.showMemory());
+calc.showMemory();
+kalk.resetMemory();
+console.log(kalk.showMemory());
 
 //Zadanie 3
 function generateRandomNumber(){

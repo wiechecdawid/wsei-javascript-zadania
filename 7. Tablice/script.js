@@ -101,12 +101,16 @@
 //         sum += element;
 //     });
 
-//     return sum / arr.length;
+//     let avg = sum / arr.length;
+    
+//     arr.forEach(element => {
+//         console.log(element * avg);
+//     })
 // }
 
 // let arr = [1,2,3,4,5,6,7,8,9];
 
-// console.log(avg(arr)); // 5
+// avg(arr);
 
 
 //Zadanie 6

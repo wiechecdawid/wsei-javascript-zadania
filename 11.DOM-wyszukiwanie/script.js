@@ -1,11 +1,13 @@
 //Zadanie 1
-var lists = document.querySelectorAll('.list');
+const lists = document.querySelectorAll('.list');
 
 //Zadanie 2
-var element = (parameter) => document.querySelector(parameter);
+const el = (parameter) => document.querySelector(parameter);
+
+console.log(el('ul'));
 
 //Zadanie 3
-var list = document.getElementById('list');
+const list = document.getElementById('list');
 
 //zadanie 4
 var lis = document.querySelectorAll('li');
