@@ -47,6 +47,26 @@ var changeEx3Color = () => {
 changeEx3Color();
 
 //Zadanie 4
-function validateInput(e) {
-    
+const hasDigit = (input) => {
+    let regex = new RegExp('[0-9]+')
+
+    return regex.test(input);
 }
+
+
+let validation = document.createElement('div');
+validation.innerHTML = "Tekst nie może zawierać cyfr!";
+validation.style.color = 'red';
+validation.style.display = 'none'
+
+testInput.insertAdjacentElement('afterend', validation);
+
+testInput.addEventListener('change', () => {
+    if(hasDigit(testInput.value)){
+        validation.style.display = 'block';
+    } else {
+        validation.style.display = 'none';
+    }
+});
+
+

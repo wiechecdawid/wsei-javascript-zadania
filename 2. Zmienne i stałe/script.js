@@ -20,4 +20,4 @@ console.log(sum = x+y) // 3
 
 //Zadanie 3
 let i;
-console.log(i); // undefined - zmiennabez wartości i bez określonego typu
+console.log(i); // undefined - zmienna bez wartości i bez określonego typu

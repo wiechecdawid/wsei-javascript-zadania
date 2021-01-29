@@ -1,0 +1,90 @@
+// zad 1
+const divs = document.querySelectorAll('.more-divs');
+
+function listTags(divArr){
+    let newArr = [];
+
+    divArr.forEach(e => {
+        newArr.push(e.tagName)
+    });
+
+    return newArr;
+}
+
+console.log(listTags(divs));
+
+//Zad2
+const elementDetails = (element) => {
+    console.log(element.innerHTML)
+    console.log(element.outerHTML)
+    console.log(element.className)
+    console.log(element.classList)
+    console.log(element.dataset)
+}
+
+elementDetails(document.querySelector('.short-list'))
+
+//Zad 3
+const check = document.querySelector('#datasetCheck');
+const first = check.dataset.numberone;
+const second = check.dataset.numbertwo;
+const third = check.dataset.numberThree;
+
+console.log(first+second+third);
+console.log(first-second-third);
+
+//zad4
+
+document.getElementById("spanText").innerText =  "dowolny";
+
+//zad5
+
+document.getElementById("spanText").className =  "newClassName";
+
+//Zad 6
+function func(classes){
+    let arr = [];
+
+    classes.forEach(el => {
+        console.log(el);
+        arr.push(el);
+    });
+    console.log(arr.join("+"));
+};
+
+const element = document.getElementById("classes");
+
+func(element.classList)
+
+//Zad 7
+
+
+//Zad 8
+function stringToObject(input) {
+    let a = {newClass: input};
+    assignClass(a);
+};
+
+function assignClass(obj) {
+    let b = obj.newClass;
+    document.getElementById('myDiv').className = b;
+};
+
+stringToObject('short-list');
+
+//Zad 9
+function addClass(param){
+    param = parseInt(param);
+    const numbers = document.querySelector("#numbers");
+    if(param %2===0){
+        numbers.className = "even";
+    }
+    else{
+        numbers.className = "odd";
+    }
+    
+}
+var randomNum = Math.floor(Math.random() * 10) + 1;
+addClass(randomNum)
+
+//Zad 10
