@@ -88,3 +88,24 @@ var randomNum = Math.floor(Math.random() * 10) + 1;
 addClass(randomNum)
 
 //Zad 10
+function takeFromLongList(longList){
+    let listChildren = longList.children;
+
+    return listChildren;
+}
+
+let longList = document.getElementById('longList');
+
+console.log(takeFromLongList(longList));
+
+//Zad 11
+const messWithLongListChildren = longListChildren => {
+    longListChildren.forEach(listChild =>{
+        listChild.dataset.oldVal = listChild.innerText;
+        let newVal = Math.floor(Math.random() * 10) + 1;
+
+        listChild.innerText = newVal
+    });
+}
+
+messWithLongListChildren([...longList.children]);
