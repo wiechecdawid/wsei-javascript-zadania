@@ -57,7 +57,14 @@ const element = document.getElementById("classes");
 func(element.classList)
 
 //Zad 7
-
+function addAttr(els) {
+    const filtered = [...els].filter(el => !el.getAttribute('data-text'));
+    filtered.forEach((el) => {
+      el.setAttribute('data-text', 'text');
+    })
+  }
+  
+  addAttr(document.getElementById('longList').getElementsByTagName('li'));
 
 //Zad 8
 function stringToObject(input) {

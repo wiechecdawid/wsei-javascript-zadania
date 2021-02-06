@@ -82,38 +82,24 @@ kalk.resetMemory();
 console.log(kalk.showMemory());
 
 //Zadanie 3
-function generateRandomNumber(){
-    min = 1;
-    max = 10;
-
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+function RandNum() {
+	this.changeNumber = () => {
+		RandNum.prototype.interval = setInterval(() => {
+			RandNum.prototype.num = Math.round(Math.random() * 10);
+			console.log(RandNum.prototype.num);
+		}, 1000);
+	};
+	this.isMoreThan5 = () => {
+		RandNum.prototype.check = setInterval(() => {
+			if (RandNum.prototype.num > 5) {
+        console.log("Większa niż 5, koniec");
+				clearInterval(RandNum.prototype.interval);
+				clearInterval(RandNum.prototype.check);
+			}
+		}, 1000);
+	};
 }
-
-MessWithNumber.prototype.shouldBeGenerated = false;
-MessWithNumber.prototype.number = 0;
-
-function MessWithNumber(){
-    this.startRandomNumbers = () => {
-        this.shouldBeGenerated = true;
-        let i = 1;
-        while(this.shouldBeGenerated){
-            let temp = generateRandomNumber();
-            i++;
-            this.stopRandomNubmbers(temp);
-
-            this.number = temp;
-            console.log(this.number);
-        }   
-    }
-
-    this.stopRandomNubmbers = (newNumber) => {
-        if(newNumber - this.number == 5)
-            this.shouldBeGenerated = false;
-    }
-}
-
-
-let m = new MessWithNumber();
-let n = new MessWithNumber();
-
-m.startRandomNumbers();
+const randNumChange = new RandNum();
+const randNumCheck = new RandNum();
+randNumChange.changeNumber();
+randNumCheck.isMoreThan5()
